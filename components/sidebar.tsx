@@ -18,7 +18,7 @@ const Sidebar = async () => {
   });
 
   return (
-    <aside className="min-h-screen flex flex-row bg-gray-100 w-fit border-r">
+    <aside className="min-h-screen flex bg-gray-100 w-fit border-r">
       <div className="flex flex-col justify-between w-56 bg-white overflow-hidden min-h-full py-6 px-4">
         <div>
           <StoreSwitcher items={stores} />

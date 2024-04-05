@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Settings } from "lucide-react";
+import { LayoutDashboard, Monitor, Settings } from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -17,6 +17,12 @@ const MainNavigation = ({ className, ...props }: React.HTMLAttributes<HTMLElemen
       icon: <LayoutDashboard size={20} />,
     },
     {
+      href: `/${params.storeId}/billboards`,
+      label: "Billboards",
+      active: pathname === `/${params.storeId}/billboards`,
+      icon: <Monitor size={20} />,
+    },
+    {
       href: `/${params.storeId}/settings`,
       label: "Settings",
       active: pathname === `/${params.storeId}/settings`,
@@ -25,7 +31,7 @@ const MainNavigation = ({ className, ...props }: React.HTMLAttributes<HTMLElemen
   ];
 
   return (
-    <ul className="flex flex-col">
+    <ul className="flex flex-col gap-y-2">
       {routes.map((route) => (
         <li key={route.href}>
           <Link
