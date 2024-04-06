@@ -30,7 +30,7 @@ export default async function DashboardLayout({
   return (
     <div className="flex">
       <Sidebar />
-      <main className="mx-8 py-6 w-full">{children}</main>
+      <main className="ml-64 mr-8 py-6 w-full">{children}</main>
     </div>
   );
 }

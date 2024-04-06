@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Monitor, Settings } from "lucide-react";
+import { Layers, LayoutDashboard, Monitor, Settings } from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -21,6 +21,12 @@ const MainNavigation = ({ className, ...props }: React.HTMLAttributes<HTMLElemen
       label: "Billboards",
       active: pathname === `/${params.storeId}/billboards`,
       icon: <Monitor size={20} />,
+    },
+    {
+      href: `/${params.storeId}/categories`,
+      label: "Categories",
+      active: pathname === `/${params.storeId}/categories`,
+      icon: <Layers size={20} />,
     },
     {
       href: `/${params.storeId}/settings`,
