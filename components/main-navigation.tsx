@@ -1,7 +1,16 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Layers, LayoutDashboard, Monitor, Settings } from "lucide-react";
+import {
+  Layers,
+  LayoutDashboard,
+  Monitor,
+  Package,
+  PaintBucket,
+  PencilRuler,
+  Settings,
+  ShoppingBasket,
+} from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -27,6 +36,30 @@ const MainNavigation = ({ className, ...props }: React.HTMLAttributes<HTMLElemen
       label: "Categories",
       active: pathname === `/${params.storeId}/categories`,
       icon: <Layers size={20} />,
+    },
+    {
+      href: `/${params.storeId}/sizes`,
+      label: "Sizes",
+      active: pathname === `/${params.storeId}/sizes`,
+      icon: <PencilRuler size={20} />,
+    },
+    {
+      href: `/${params.storeId}/colors`,
+      label: "Colors",
+      active: pathname === `/${params.storeId}/colors`,
+      icon: <PaintBucket size={20} />,
+    },
+    {
+      href: `/${params.storeId}/products`,
+      label: "Products",
+      active: pathname === `/${params.storeId}/products`,
+      icon: <ShoppingBasket size={20} />,
+    },
+    {
+      href: `/${params.storeId}/orders`,
+      label: "Orders",
+      active: pathname === `/${params.storeId}/orders`,
+      icon: <Package size={20} />,
     },
     {
       href: `/${params.storeId}/settings`,
